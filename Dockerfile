@@ -4,5 +4,5 @@ RUN apt-get -qqy update \
  && docker-php-ext-install zip
 RUN curl -#o /usr/local/bin/composer https://getcomposer.org/composer.phar \
  && chmod +x /usr/local/bin/composer
-ENV PATH $HOME/.composer/bin:$PATH
+ENV PATH /root/.composer/bin:$PATH
 RUN ["composer", "global", "require", "--no-ansi", "--no-progress", "--sort-packages", "--no-interaction", "phpmd/phpmd"]

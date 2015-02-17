@@ -5,3 +5,4 @@ RUN apt-get -qqy update \
 RUN curl -#o /usr/local/bin/composer https://getcomposer.org/composer.phar \
  && chmod +x /usr/local/bin/composer
 ENV PATH /root/.composer/vendor/bin:$PATH
+ENV TIMEZONE UTC
